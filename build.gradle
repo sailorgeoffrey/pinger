@@ -1,0 +1,45 @@
+buildscript {
+    ext {
+        //springBootVersion = '1.3.0.BUILD-SNAPSHOT'
+        springFrameworkVersion = '4.1.7.RELEASE'
+        springBootVersion = '1.2.5.RELEASE'
+        qbitVersion = '0.9.0.RELEASE'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+group 'com.geoffreychandler'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            'javax.el:el-api:2.2',
+            'net.logstash.logback:logstash-logback-encoder:4.2',
+            "io.advantageous.qbit:qbit-spring:$qbitVersion",
+    )
+}
+
+jar {
+    manifest.attributes(
+            "Implementation-Title": "Pinger",
+            "Implementation-Version": version
+    )
+    mainClassName = "com.geoffreychandler.pinger.Pinger"
+}
