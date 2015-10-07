@@ -17,7 +17,7 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'spring-boot'
 
-group 'com.geoffreychandler'
+group 'com.sailorgeoffrey'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -41,5 +41,5 @@ jar {
             "Implementation-Title": "Pinger",
             "Implementation-Version": version
     )
-    mainClassName = "com.geoffreychandler.pinger.Pinger"
+    mainClassName = "com.sailorgeoffrey.pinger.Pinger"
 }

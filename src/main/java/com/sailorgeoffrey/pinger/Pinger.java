@@ -1,4 +1,4 @@
-package com.geoffreychandler.pinger;
+package com.sailorgeoffrey.pinger;
 
 import io.advantageous.qbit.spring.annotation.AutoFlush;
 import io.advantageous.qbit.spring.annotation.EnableQBit;
