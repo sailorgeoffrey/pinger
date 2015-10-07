@@ -3,7 +3,7 @@ buildscript {
         //springBootVersion = '1.3.0.BUILD-SNAPSHOT'
         springFrameworkVersion = '4.1.7.RELEASE'
         springBootVersion = '1.2.5.RELEASE'
-        qbitVersion = '0.9.0.RELEASE'
+        qbitVersion = '0.9.1-SNAPSHOT'
     }
     repositories {
         mavenLocal()

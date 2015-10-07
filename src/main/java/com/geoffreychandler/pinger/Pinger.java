@@ -1,6 +1,6 @@
 package com.geoffreychandler.pinger;
 
-import io.advantageous.qbit.service.ServiceBuilder;
+import io.advantageous.qbit.spring.annotation.AutoFlush;
 import io.advantageous.qbit.spring.annotation.EnableQBit;
 import io.advantageous.qbit.spring.annotation.QBitService;
 import org.slf4j.Logger;
@@ -49,6 +49,7 @@ public class Pinger {
     }
 
     @Bean
+    @AutoFlush
     @QBitService(asyncInterface = ReporterServiceAsync.class)
     public Object reporterService() {
         return (ReporterServiceAsync) line -> {
