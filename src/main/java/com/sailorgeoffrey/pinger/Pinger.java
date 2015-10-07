@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 /**
  * Pings sites at a set interval and reports stats.
  *
- * @author gcc@rd.io (Geoff Chandler)
+ * @author geoffc@gmail.com (Geoff Chandler)
  */
 @EnableQBit
 @SpringBootApplication
